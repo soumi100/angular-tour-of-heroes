@@ -9,17 +9,21 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./hero-detail.component.css'],
 })
 export class HeroDetailComponent {
-  @Input() hero?: Hero;
+  hero: Hero | undefined;
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: HeroService,
-    private location: Location,
-    private router: Router
+    private heroService: HeroService
   ) {}
+
+  ngOnInit(): void {
+    this.getHero();
+  }
 
   getHero(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.heroService.getHero(id).subscribe((hero) => (this.hero = hero));
+    this.heroService.getHero(id)
+      .subscribe(hero => this.hero = hero);
   }
+
 }
