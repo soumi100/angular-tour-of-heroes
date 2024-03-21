@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessagesComponent } from './messages/messages.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { MatMenuModule} from '@angular/material/menu';
     DashboardComponent,
     MessagesComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, MatMenuModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, MatMenuModule, StoreModule.forRoot({}, {})],
   providers: [],
   bootstrap: [AppComponent],
 })
