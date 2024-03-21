@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { HeroService } from '../hero.service';
 import { Hero } from '../hero';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

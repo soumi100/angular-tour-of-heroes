@@ -8,10 +8,18 @@ import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessagesComponent } from './messages/messages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, HeroDetailComponent, DashboardComponent, MessagesComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    DashboardComponent,
+    MessagesComponent
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, MatMenuModule],
   providers: [],
   bootstrap: [AppComponent],
 })
